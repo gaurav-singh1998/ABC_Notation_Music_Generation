@@ -16,8 +16,8 @@ def build_model(batch_size, seq_length, vocab_size):
     model = Sequential()
     model.add(Embedding(vocab_size, 512, batch_input_shape=(batch_size, seq_length)))
     for i in range(3):
-        model.add(LSTM(126, return_sequences=True, stateful=True))
-        model.add(Dropout(0.2))
+        model.add(LSTM(256, return_sequences=True, stateful=True))
+        model.add(Dropout(0.4))
     model.add(TimeDistributed(Dense(vocab_size)))
     model.add(Activation('softmax'))
     return model
