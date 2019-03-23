@@ -1,7 +1,7 @@
 import os
 import json
 import argparse
-from keras import optimizers
+#from keras import optimizers
 import numpy as np
 
 from model import build_model, save_weights
@@ -10,8 +10,8 @@ from model import build_model, save_weights
 DATA_DIR = "./data"
 LOG_DIR = "./logs"
 
-BATCH_SIZE = 32
-SEQ_LENGTH = 128
+BATCH_SIZE = 16
+SEQ_LENGTH = 24
 
 
 class TrainLogger(object):
@@ -59,9 +59,9 @@ def train(text, epochs=100, save_freq=10):
   
     model = build_model(BATCH_SIZE, SEQ_LENGTH, vocab_size)
     model.summary()
-    rmsprop=optimizers.RMSprop(lr=0.01, rho=0.9, epsilon=None, decay=0.0)
+    #rmsprop=optimizers.RMSprop(lr=0.01, rho=0.9, epsilon=None, decay=0.0)
     model.compile(
-        loss="categorical_crossentropy", optimizer=rmsprop, metrics=["accuracy"]
+        loss="categorical_crossentropy", optimizer='adam', metrics=["accuracy"]
     )
 
     
