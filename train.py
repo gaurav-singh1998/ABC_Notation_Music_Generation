@@ -11,7 +11,7 @@ DATA_DIR = "./data"
 LOG_DIR = "./logs"
 
 BATCH_SIZE = 16
-SEQ_LENGTH = 24
+SEQ_LENGTH = 64
 
 
 class TrainLogger(object):
