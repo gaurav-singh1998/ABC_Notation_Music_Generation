@@ -59,7 +59,7 @@ def train(text, epochs=100, save_freq=10):
   
     model = build_model(BATCH_SIZE, SEQ_LENGTH, vocab_size)
     model.summary()
-    rmsprop=optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=None, decay=0.0)
+    rmsprop=optimizers.RMSprop(lr=0.01, rho=0.9, epsilon=None, decay=0.0)
     model.compile(
         loss="categorical_crossentropy", optimizer=rmsprop, metrics=["accuracy"]
     )
