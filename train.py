@@ -1,7 +1,6 @@
 import os
 import json
 import argparse
-#from keras import optimizers
 import numpy as np
 
 from model import build_model, save_weights
@@ -59,7 +58,6 @@ def train(text, epochs=100, save_freq=10):
   
     model = build_model(BATCH_SIZE, SEQ_LENGTH, vocab_size)
     model.summary()
-    #rmsprop=optimizers.RMSprop(lr=0.01, rho=0.9, epsilon=None, decay=0.0)
     model.compile(
         loss="categorical_crossentropy", optimizer='adam', metrics=["accuracy"]
     )
