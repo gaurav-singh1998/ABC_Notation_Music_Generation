@@ -22,3 +22,4 @@ Use 'sample.py' to run the trained model with no number of epochs, length and se
 Use 'train.py' to train the model from scratch. Here the arguments are input, epochs and save_freq.
 
 Use 'model.py' to change the parameters of the model.
+bey gaurav singh t shirt hona
